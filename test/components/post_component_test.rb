@@ -23,4 +23,10 @@ class PostComponentTest < ViewComponent::TestCase
     end
     assert_text(expected)
   end
+
+  def test_Render_preview
+    render_preview(:with_default_title)
+
+    assert_text('Default Title')
+  end
 end
