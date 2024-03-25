@@ -5,5 +5,4 @@ class HeaderComponent < ViewComponent::Base
     @title = title
     @classes = classes
   end
-
 end

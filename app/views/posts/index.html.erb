@@ -21,6 +21,12 @@
       <%= render(HeaderComponent.new(title: 'Test title 1', classes: 'text-green-400 font-semibold leading-6')) %>
       <%= render(HeaderComponent.new(title: 'Test title 2', classes: 'text-cyan-400 text-center')) %>
       <%= render(HeaderComponent.new(title: 'Test title 3', classes: 'text-purple-400 md:text-red-400 lg:text-pink-400 xl:text-orange-400 text-right font-bold')) %>
+
+      <%# Content info %>
+      <%= render(HeaderComponent.new(title: 'Content test 1').with_content('This is a content block 1')) %>
+      <%= render(HeaderComponent.new(title: 'Content test 2')) do %>
+        This is a content block 2
+      <% end %>
     </div>
   </div>
 </div>
