@@ -1,17 +1,1 @@
-<div id="<%= dom_id post %>">
-  <p class="my-5">
-    <%= render(HeaderComponent.new(title: 'Title:', classes: 'fblock font-medium mb-1')) %>
-    <%= post.title %>
-  </p>
-
-  <p class="my-5">
-    <%= render(HeaderComponent.new(title: 'Body:', classes: 'fblock font-medium mb-1')) %>
-    <%= post.body %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Edit this post", edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
-</div>
+<%= render(PostComponent.new(id: post.id, title: post.title, body: post.body)) %>
