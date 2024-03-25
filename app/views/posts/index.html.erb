@@ -10,14 +10,8 @@
   </div>
 
   <div id="posts" class="min-w-full">
-    <%= @posts.each do |post| %>
-      <%= render(PostComponent.new(id: post.id, title: post.title, body: post.body)) %>
-
-      <% if action_name != "show" %>
-        <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-        <%= link_to "Edit this post", edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-        <hr class="mt-6">
-      <% end %>
+    <% @posts.each do |post| %>
+      <%= render(PostComponent.new(post: post)) %>
     <% end %>
   </div>
 
