@@ -9,10 +9,10 @@
 #  updated_at :datetime         not null
 #
 
-one:
-  title: MyString
-  body: MyText
+apple:
+  title: Apple title
+  body: Apple body
 
-two:
-  title: MyString
-  body: MyText
+new_york_times:
+  title: New York Times title
+  body: New York Times body
