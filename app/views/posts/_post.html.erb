@@ -1,11 +1,11 @@
 <div id="<%= dom_id post %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
+    <%= render(HeaderComponent.new(title: 'Title:', classes: 'fblock font-medium mb-1')) %>
     <%= post.title %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Body:</strong>
+    <%= render(HeaderComponent.new(title: 'Body:', classes: 'fblock font-medium mb-1')) %>
     <%= post.body %>
   </p>
 
