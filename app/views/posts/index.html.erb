@@ -11,7 +11,13 @@
 
   <div id="posts" class="min-w-full">
     <% @posts.each do |post| %>
-      <%= render(PostComponent.new(post: post)) %>
+      <%= render(PostComponent.new(post: post)) do %>
+        <% if action_name != "show" %>
+          <%= link_to "Show this @post", post_path(post), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <%= link_to "Edit this post", edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+          <hr class="mt-6">
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 
