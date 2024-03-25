@@ -69,5 +69,4 @@ end
 gem "tailwindcss-rails", "~> 2.3"
 gem "view_component", "~> 3.11"
 gem "annotate", "~> 3.2"
-
 gem "rubocop", "~> 1.62"
