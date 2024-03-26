@@ -17,6 +17,7 @@
           <%= link_to "Edit this post", edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
           
           <%= render(Shared::ButtonComponent.new(name: 'Click me!', styles: 'bg-red-100 rounded border border-black px-5 py-2 hover:bg-cyan-100')) %>
+          <%= render(Shared::GreetButtonComponent.new(name: 'Greet', styles: 'bg-teal-400 rounded border-red-400 px-4 py-2 hover:bg-teal-500')) %>
           <hr class="mt-6">
         <% end %>
       <% end %>
